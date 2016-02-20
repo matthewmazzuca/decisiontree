@@ -76,19 +76,14 @@ y = dataset[:,8]
 
 
 learning = Learning(url)
+learning.tree_print()
 # metrics
 
 
 
 # fit a CART model to the data
-# model = DecisionTreeClassifier(criterion='entropy', presort=True)
-# model.fit(X, y)
-# print(model)
-# # make predictions
-# expected = y
-# predicted = model.predict(X)
-# learning = Learning(model)
-# learning.num_features()
+
+# make predictions
 # summarize the fit of the model
 # print(metrics.classification_report(expected, predicted))
 # print(metrics.confusion_matrix(expected, predicted))
