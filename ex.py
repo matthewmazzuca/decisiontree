@@ -76,7 +76,7 @@ y = dataset[:,8]
 
 
 learning = Learning(url)
-learning.test()
+learning.produce_image()
 # metrics
 
 

@@ -4,6 +4,8 @@ import urllib
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.cross_validation import train_test_split
+from sklearn import tree
+import os
 
 class Learning:
 
@@ -87,10 +89,19 @@ class Learning:
 
 	def test(self):
 		X_train, X_test, y_train, y_test = train_test_split(self.X, self.y, random_state=0)
+		
+		leave_id = self.model.apply(X_test)
+		data = {}
+		print X_test
+		for i in leave_id:
+			data[leave_id[i]] = X_test[i]
 
-		print "X_train", X_train
-		print "X_test", X_test
-		print "y_train", y_train
-		print "y_test", y_test
+		print data
+
+	def produce_image(self):
+		tree.export_graphviz(self.model, out_file='tree.dot')
+		os.system("dot -Tpng tree.dot -o tree.png")
+		os.system("open tree.png")
+		return
 
 
