@@ -58,6 +58,11 @@
 
 import numpy as np
 import urllib
+
+from sklearn import metrics
+from sklearn.tree import DecisionTreeClassifier
+from learning import Learning
+
 # url with dataset
 url = "http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
 # download the file
@@ -69,39 +74,45 @@ dataset = np.loadtxt(raw_data, delimiter=",")
 X = dataset[:,0:7]
 y = dataset[:,8]
 
-from sklearn import metrics
-from sklearn.ensemble import ExtraTreesClassifier
-model = ExtraTreesClassifier()
-model.fit(X, y)
-# display the relative importance of each attribute
-print(model.feature_importances_)
+
+learning = Learning(url)
+# metrics
 
 
 
-from sklearn.feature_selection import RFE
-from sklearn.linear_model import LogisticRegression
-model = LogisticRegression()
-# create the RFE model and select 3 attributes
-rfe = RFE(model, 3)
-rfe = rfe.fit(X, y)
-# summarize the selection of the attributes
-print(rfe.support_)
-print(rfe.ranking_)
-
-
-
-
-from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
 # fit a CART model to the data
-model = DecisionTreeClassifier()
-model.fit(X, y)
-print(model)
-# make predictions
-expected = y
-predicted = model.predict(X)
+# model = DecisionTreeClassifier(criterion='entropy', presort=True)
+# model.fit(X, y)
+# print(model)
+# # make predictions
+# expected = y
+# predicted = model.predict(X)
+# learning = Learning(model)
+# learning.num_features()
 # summarize the fit of the model
-print(metrics.classification_report(expected, predicted))
-print(metrics.confusion_matrix(expected, predicted))
+# print(metrics.classification_report(expected, predicted))
+# print(metrics.confusion_matrix(expected, predicted))
+
+
+# from sklearn import metrics
+# from sklearn.ensemble import ExtraTreesClassifier
+# model = ExtraTreesClassifier()
+# model.fit(X, y)
+# # display the relative importance of each attribute
+# print(model.feature_importances_)
+
+
+# ############feature identifications
+# from sklearn.feature_selection import RFE
+# from sklearn.linear_model import LogisticRegression
+# model = LogisticRegression()
+# # create the RFE model and select 3 attributes
+# rfe = RFE(model, 3)
+# rfe = rfe.fit(X, y)
+# # summarize the selection of the attributes
+# print(rfe.support_)
+# print(rfe.ranking_)
+
+
 
 
