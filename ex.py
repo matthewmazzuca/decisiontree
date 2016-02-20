@@ -76,7 +76,7 @@ y = dataset[:,8]
 
 
 learning = Learning(url)
-learning.tree_print()
+learning.test()
 # metrics
 
 

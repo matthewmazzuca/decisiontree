@@ -3,6 +3,7 @@ import urllib
 
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.cross_validation import train_test_split
 
 class Learning:
 
@@ -51,7 +52,7 @@ class Learning:
 	def threshold(self):
 		return self.tree.threshold
 
-	def tree_print(self):
+	def tree_print(self, *args, **kwargs):
 		node_depth = np.zeros(shape=self.num_nodes)
 		is_leaves = np.zeros(shape=self.num_nodes, dtype=bool)
 		stack = [(0, -1)]  # seed is the root node id and its parent depth
@@ -82,6 +83,14 @@ class Learning:
 		                 self.threshold[i],
 		                 self.children_right[i],
 		                 ))
-		print()
 		return
+
+	def test(self):
+		X_train, X_test, y_train, y_test = train_test_split(self.X, self.y, random_state=0)
+
+		print "X_train", X_train
+		print "X_test", X_test
+		print "y_train", y_train
+		print "y_test", y_test
+
 
