@@ -110,17 +110,24 @@ dataset = np.loadtxt(raw_data, delimiter=",")
 
 
 learning = Learning('final_training3.txt')
-reshaped = [learning.X[1]]
-print learning.X[30]
 
-for item in range(len(learning.X[30])):
-	if learning.X[30][item] == 1:
-		print learning.target[item]
+
+# reshaped = [learning.X[1]]
+# for item in learning.y:
+# 	print item
+# print learning.X[30]
+# for item in learning.target:
+# 	print item
+
+print learning.get_question(0)
+# for item in range(len(learning.X[30])):
+# 	if learning.X[30][item] == 1:
+# 		print learning.target[item]
 # learning.tree_print()
 # learning.treeToJson()
 # learning.produce_image()
-print learning.predict(reshaped)
-print learning.predict([learning.X[30]])
+# print learning.predict(reshaped)
+# print learning.predict([learning.X[30]])
 
 # print "your diagnosis:", '\t', "you have acid reflux"
 # metrics
