@@ -1,6 +1,7 @@
 import numpy as np
 import urllib
 
+import sklearn
 from sklearn import metrics
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.cross_validation import train_test_split
@@ -11,7 +12,7 @@ class Learning:
 
 	def __init__(self,training):
 		self.training = training
-		self.X, self.y = self.init_data()
+		self.X, self.y, self.target = self.init_data()
 		self.model = self.get_model()
 		self.tree = self.tree_structure()
 		self.num_nodes = self.num_nodes()
@@ -20,11 +21,27 @@ class Learning:
 		self.threshold = self.threshold()
 
 	def init_data(self):
-		raw = urllib.urlopen(self.training)
-		dataset = np.loadtxt(raw, delimiter=",")
-		X = dataset[:,0:7]
-		y = dataset[:,8]
-		return X, y
+		d2 = np.loadtxt(self.training, dtype=str, delimiter="\t")
+
+		# print d2[1]
+		y = d2[:,0]
+		X = d2[:,1:,]
+
+		target = X[0]
+		# self.clean_target(target)
+		X = X.astype(int)
+		X = np.delete(X, 0, 0)
+		y = np.delete(y, 0)
+		# print X2[1]
+		# print Y2[1]
+		return X, y, target
+
+	# def clean_target(self,target):
+	# 	for item in target:
+	# 		if '"' in item:
+	# 			rows = item.split('"')
+	# 			target[item] = rows[1]
+	# 			# print target[item]
 
 	def get_model(self):
 		model = DecisionTreeClassifier(criterion='entropy', presort=True)
@@ -34,14 +51,15 @@ class Learning:
 	def num_features(self):
 		return self.model.n_features_
 
-
-
 	# tree properties
 	def tree_structure(self):
 		return self.model.tree_
 
 	def num_nodes(self):
 		return self.tree.node_count
+
+	def predict(self, guess):
+		return self.model.predict(guess)
 
 	def children(self):
 		children_left = self.tree.children_left
@@ -99,9 +117,96 @@ class Learning:
 		print data
 
 	def produce_image(self):
-		tree.export_graphviz(self.model, out_file='tree.dot')
+		tree.export_graphviz(self.model, out_file='tree.dot', class_names=self.target)
 		os.system("dot -Tpng tree.dot -o tree.png")
 		os.system("open tree.png")
 		return
+
+	def treeToJson(self, feature_names=None):
+		decision_tree = self.model
+		from warnings import warn
+
+		js = ""
+
+		def node_to_str(tree, node_id, criterion):
+			if not isinstance(criterion, sklearn.tree.tree.six.string_types):
+				criterion = "impurity"
+
+			value = tree.value[node_id]
+			if tree.n_outputs == 1:
+				value = value[0, :]
+
+			jsonValue = ', '.join([str(x) for x in value])
+
+			if tree.children_left[node_id] == sklearn.tree._tree.TREE_LEAF:
+				return '"id": "%s", "criterion": "%s", "impurity": "%s", "samples": "%s", "value": [%s]' \
+							% (node_id, 
+							criterion,
+							tree.impurity[node_id],
+							tree.n_node_samples[node_id],
+							jsonValue)
+			else:
+				if feature_names is not None:
+					feature = feature_names[tree.feature[node_id]]
+				else:
+					feature = tree.feature[node_id]
+
+				print feature
+				ruleType = "<="
+				ruleValue = "%.4f" % tree.threshold[node_id]
+				# if "=" in feature:
+				# 	ruleType = "="
+				# 	ruleValue = "false"
+				# else:
+				# 	ruleType = "<="
+				# 	ruleValue = "%.4f" % tree.threshold[node_id]
+
+				return '"id": "%s", "rule": "%s %s %s", "%s": "%s", "samples": "%s"' \
+						% (node_id, 
+						feature,
+						ruleType,
+						ruleValue,
+						criterion,
+						tree.impurity[node_id],
+						tree.n_node_samples[node_id])
+
+		def recurse(tree, node_id, criterion, parent=None, depth=0):
+			tabs = "  " * depth
+			js = ""
+
+			left_child = tree.children_left[node_id]
+			right_child = tree.children_right[node_id]
+
+			js = js + "\n" + \
+				tabs + "{\n" + \
+				tabs + "  " + node_to_str(tree, node_id, criterion)
+
+			if left_child != sklearn.tree._tree.TREE_LEAF:
+				js = js + ",\n" + \
+					tabs + '  "left": ' + \
+					recurse(tree, \
+							left_child, \
+							criterion=criterion, \
+							parent=node_id, \
+							depth=depth + 1) + ",\n" + \
+					tabs + '  "right": ' + \
+					recurse(tree, \
+							right_child, \
+							criterion=criterion, \
+							parent=node_id,
+							depth=depth + 1)
+
+			js = js + tabs + "\n" + \
+				tabs + "}"
+
+			return js
+
+		if isinstance(decision_tree, sklearn.tree.tree.Tree):
+			js = js + recurse(decision_tree, 0, criterion="impurity")
+		else:
+			js = js + recurse(decision_tree.tree_, 0, criterion=decision_tree.criterion)
+
+		print js
+
 
 

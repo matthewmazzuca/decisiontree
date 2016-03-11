@@ -67,17 +67,62 @@ from learning import Learning
 url = "http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
 # download the file
 raw_data = urllib.urlopen(url)
+# print ra
 # load the CSV file as a numpy matrix
 dataset = np.loadtxt(raw_data, delimiter=",")
+# d2 = np.loadtxt('final_training.txt', dtype=str, delimiter="\t")
+# print d2[1]
+# with open('final_training.txt', 'r') as f:
+
+# 		for row in f:
+
+# 			rows = row.split('\r')
+# 			for i in rows:
+# 				currentrow =  i.split('\t')
+# 				d2.append(currentrow)
+
+# f.close()
+
+
+# d2 = np.loadtxt(, dtype=str, delimiter='\t', comments=None)
 # separate the data from the target attributes
 # take colums and put in array
-X = dataset[:,0:7]
-y = dataset[:,8]
+# Y2 = d2[:,0]
+# X2 = d2[:,1:,]
+
+# X2 = X2.astype(int)
+# print X2
+# print Y2
+
+# X2 = np.delete(X2, 0, 0)
+# Y2 = np.delete(Y2, 0)
+
+# print len(X2)
+# print len(Y2)
+
+# print X2
+# print Y2
+
+# X = dataset[:,0:7]
+# print X[1]
+# y = dataset[:,8]
+# print y[1]
 
 
-learning = Learning(url)
-learning.tree_print()
-learning.produce_image()
+learning = Learning('final_training3.txt')
+reshaped = [learning.X[1]]
+print learning.X[30]
+
+for item in range(len(learning.X[30])):
+	if learning.X[30][item] == 1:
+		print learning.target[item]
+# learning.tree_print()
+# learning.treeToJson()
+# learning.produce_image()
+print learning.predict(reshaped)
+print learning.predict([learning.X[30]])
+
+# print "your diagnosis:", '\t', "you have acid reflux"
 # metrics
 
 
