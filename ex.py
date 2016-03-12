@@ -116,8 +116,9 @@ learning = Learning('final_training3.txt')
 # for item in learning.y:
 # 	print item
 # print learning.X[30]
+for i in range(len(learning.target)):
 # for item in learning.target:
-# 	print item
+	print str(i) + ": " + str(learning.target[i])
 
 print learning.get_question(0)
 # for item in range(len(learning.X[30])):

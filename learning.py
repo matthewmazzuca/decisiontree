@@ -311,256 +311,309 @@ class Learning:
 		# Incontinence of stool
 			48:"Have you lost control of your stool?",
 		# Sinus problems
+			49:"Do you have sinus problems?",
 		# Pain or soreness of breast
+			50:"Are your breasts sore?",
 		# Low urine output
+			51:"Do you have low urine output?",
 		# Mouth ulcer
+			52:"Do you have a sore (or ulcer) inside your mouth?",
 		# Lower abdominal pain
+			53:"Do you have lower abdominal pain?",
 		# Skin growth
+			54:"Are there callus', corns or skin tags in the area?",
 		# Unusual color or odor to urine
+			55:"Is there an Unusual colour or odor to your urine?",
 		# Obsessions and compulsions
-		# Neck mass
-		# Low back symptoms
-		# Eye redness
-		# Visual disturbance
-		# Vaginal bleeding after menopause
-		# Headache
-		# Diminished hearing
-		# Long menstrual periods
-		# Irregular appearing scalp
-		# Hand or finger lump or mass
-		# Leg cramps or spasms
-		# Difficulty in swallowing
-		# Hysterical behavior
-		# Coughing up sputum
-		# Neck swelling
-		# Sleepiness
-		# Vaginal bleeding
-		# Irregular belly button
-		# Seizures
-		# Irregular appearing nails
-		# Blood clots during menstrual periods
-		# Menopausal symptoms
-		# Foot and toe symptoms
-		# Ache all over
-		# Symptoms of eye
-		# Swelling of scrotum
-		# Groin pain
-		# Spotting or bleeding during pregnancy
-		# Elbow symptoms
-		# Nasal congestion
-		# Abnormal breathing sounds
-		# Skin on leg or foot looks infected
-		# Bedwetting
-		# Gum pain
-		# Fatigue
-		# Excessive appetite
-		# Excessive urination at night
-		# Joint pain
-		# Hostile behavior
-		# Wrist pain
-		# Neurological symptoms
-		# Heartburn
-		# Stiffness all over
-		# Pelvic pressure
-		# Shoulder symptoms
-		# Painful menstruation
-		# Rectal bleeding
-		# Throat swelling
-		# Thirst
-		# Musculoskeletal deformities
-		# Swollen or red tonsils
-		# Leg symptoms
-		# Shoulder stiffness or tightness
-		# Leg lump or mass
-		# Hand or finger weakness
-		# White discharge from eye
-		# Pain during pregnancy
-		# Back symptoms
-		# Itchiness of eye
-		# Sneezing
-		# Double vision
-		# Redness in or around nose
-		# Penis symptoms
-		# Problems during pregnancy
-		# Eye burns or stings
-		# Swollen lymph nodes
-		# Ankle symptoms
-		# Vaginal itching
-		# Eye discharge
-		# Sweating
-		# Bleeding or discharge from nipple
-		# Side pain
-		# Arm lump or mass
-		# Skin looks infected
-		# Involuntary urination
-		# Hand or finger swelling
-		# Low self-esteem
-		# Spots or clouds in vision
-		# Cramps and spasms
-		# Arm stiffness or tightness
-		# Lump or mass of breast
-		# Pelvic pain
-		# Itching of skin
-		# Jaw swelling
-		# Sharp abdominal pain
-		# Symptoms of the female reproductive system
-		# Tongue lesions
-		# Abnormal appearing skin
-		# Symptoms of bladder
-		# Vaginal pain
-		# Arm symptoms
-		# Lump in throat
-		# Neck pain
-		# Blood in urine
-		# Leg pain
-		# "Skin dryness, peeling, scaliness, or roughness"
-		# Neck stiffness or tightness
-		# Breathing fast
-		# Sharp chest pain
-		# Uterine contractions
-		# Warts
-		# Delusions or hallucinations
-		# Ankle swelling
-		# Disturbance of memory
-		# Lymphedema
-		# Eyelid swelling
-		# Blindness
-		# Diarrhea
-		# Groin mass
-		# Vaginal discharge
-		# Swollen eye
-		# Ear pain
-		# Sore throat
-		# Peripheral edema
-		# Antisocial behavior
-		# Neck symptoms
-		# Low back pain
-		# Skin swelling
-		# Symptoms of the face
-		# Restlessness
-		# Pain during intercourse
-		# Penis redness
-		# Fears and phobias
-		# Changes in stool appearance
-		# Constipation
-		# Throat feels tight
-		# Skin pain
-		# Difficulty speaking
-		# Nausea
-		# Arm swelling
-		# Lack of growth
-		# Burning abdominal pain
-		# Leg weakness
-		# Leg stiffness or tightness
-		# Weight loss
-		# Behavioral disturbances
-		# Sinus congestion
-		# Wheezing
-		# Difficulty breathing
-		# Sleep disturbance
-		# Hand or finger stiffness or tightness
-		# Wrist swelling
-		# Excessive anger
-		# Facial pain
-		# Pulling at ears
-		# Vaginal symptoms
-		# Congestion in chest
-		# Problems with shape or size of breast
-		# Insomnia
-		# Knee weakness
-		# Back cramps or spasms
-		# Bleeding from ear
-		# Diaper rash
-		# Changes in bowel function
-		# Skin lesion
-		# Painful sinuses
-		# Skin moles
-		# Itchy ear(s)
-		# Swollen tongue
-		# Eyelid lesion or rash
-		# Penile discharge
-		# Feeling hot
-		# Increased heart rate
-		# Chest pain
-		# Hip symptoms
-		# Infant spitting up
-		# Irregular heartbeat
-		# Hip pain
-		# Diminished vision
-		# Symptoms of the breast
-		# Lower body pain
-		# Skin on arm or hand looks infected
-		# Elbow pain
-		# Impotence
-		# Slurring words
-		# Allergic reaction
-		# Recent pregnancy
-		# Anxiety and nervousness
-		# Intermenstrual bleeding
-		# Hurts to breath
-		# Foot or toe pain
-		# Temper problems
-		# Painful urination
-		# Fever
-		# Absence of menstruation
-		# Knee symptoms
-		# Irritable infant
-		# Nosebleed
-		# Wrist symptoms
-		# Unpredictable menstruation
-		# Shoulder pain
-		# Smoking problems
-		# Paresthesia
-		# Toothache
-		# Arm pain
-		# Pelvic symptoms
-		# Foreign body sensation in eye
-		# Chest tightness
-		# Ankle pain
-		# Hand and finger symptoms
-		# Abnormal movement of eyelid
-		# Feeling ill
-		# Heavy menstrual flow
-		# Bones are painful
-		# Apnea
-		# Throat irritation
-		# Symptoms of prostate
-		# Mass in scrotum
-		# Symptoms of the skin
-		# Focal weakness
-		# Abnormal growth or development
-		# Disturbance of smell or taste
-		# Nose symptoms
-		# Knee stiffness or tightness
-		# Plugged feeling in ear
-		# Symptoms of the kidneys
-		# Symptoms of the anus
-		# Cough
-		# Regurgitation
-		# Coryza
-		# Pain in eye
-		# Vomiting
-		# Fluid retention
-		# Hot flashes
-		# Upper abdominal pain
-		# Skin rash
-		# Rib pain
-		# Swollen abdomen
-		# Infant feeding problem
-		# Knee pain
-		# Redness in ear
-		# Flatulence
-		# Chills
-		# Depression
-		# Weight gain
-		# Muscle pain
-		# Fluid in ear
-		# Penis pain
-		# Abusing alcohol
-		# Retention of urine
-		# Drainage in throat
-		# Skin irritation
-		# Shortness of breath
+			56:"Do you have obsessiosn and compulsions?",
+		# 57Neck mass
+			57:"Is there a mass in your neck?",
+		# 58Low back symptoms
+			58:"Are the symptoms in your lower back?",
+		# 59Eye redness
+			59:"Are your eyes red?",
+		# 60Visual disturbance
+			60:"Are you experiencing visual disturbances?",
+		# 61Vaginal bleeding after menopause
+			61:"Do you have vaginal bleeding after menopause?",
+		# 62Headache
+			62:"Are you experiencing headaches?",
+		# 63Diminished hearing
+			63:"Has your hearing diminished?",
+		# 64Long menstrual periods
+			64:"Do you have long menstrual periods?",
+		# 65Irregular appearing scalp
+			65:"Do you have a dry scalp and/or a rash on your scalp?",
+		# 66Hand or finger lump or mass
+			66:"Is there a lump present on your hands or fingers?",
+		# 67Leg cramps or spasms
+			67:"Are you experiencing leg cramps or spasms?",
+		# 68Difficulty in swallowing
+			68:"Are you having difficulty swallowing?",
+		# 69Hysterical behavior
+			69:"Are you behaving hysterically?",
+		# 70Coughing up sputum
+			70:"Are you coughing up mucus?",
+		# 71Neck swelling
+			71:"Is your neck swollen?",
+		# 72Sleepiness
+			72:"Do you feel drowsy/sleepy?",
+		# 73Vaginal bleeding
+			73:"Do you have vaginal bleeding?",
+		# 74Irregular belly button
+			74:"Is your belly button protruding irregularly?",
+		# 75Seizures
+			75:"Are you experiencing seizures?",
+		# 76Irregular appearing nails
+			76:"Do you have irregularly appearing nails?",
+		# 77Blood clots during menstrual periods
+			77:"Do you have bloog clots during mentrual periods?",
+		# 78Menopausal symptoms
+			78:"Are you undergoing menopause?",
+		# 79Foot and toe symptoms
+			79:"Are the symptoms present in your foot or toes?",
+		# 80Ache all over
+			80:"Do you ache all over?",
+		# 81Symptoms of eye
+			81:"Are the symptoms in your eye(s)?",
+		# 82Swelling of scrotum
+			82:"Is your scrotum swollen?",
+		# 83Groin pain
+			83:"Are you experiencing groin pain?",
+		# 84Spotting or bleeding during pregnancy
+			84:"Are you experiencing spotting or bleeding while pregnant?",
+		# 85Elbow symptoms
+			85:"Are the symptoms in or around your elbow?",
+		# 86Nasal congestion
+			86:"Do you have nasal congestion?",
+		# 87Abnormal breathing sounds
+			87:"Do you have abnormal breating sounds?",
+		# 88Skin on leg or foot looks infected
+			88:"Does the skin on your leg or foot look infected?",
+		# 89Bedwetting
+			89:"Are you wetting the bed?",
+		# 90Gum pain
+			90:"Are you experiencing pain or soreness in your gums?",
+		# 91Fatigue
+			91:"Are you tired, fatigued or feel as if you have no energy?",
+		# 92Excessive appetite
+			92:"Are you constantly hungry?",
+		# 93Excessive urination at night
+			93:"Do you excessively urinate at night?",
+		# 94Joint pain
+			94:"Are you experiencing joint pain?",
+		# 95Hostile behavior
+			95:"Do you behave violently or agressively?",
+		# 96Wrist pain
+			96:"Do you have wrist pain?",
+		# 97Neurological symptoms
+			97:"Are you experiencing neurological symptoms?",
+		# 98Heartburn
+			98:"Do you have heartburn?",
+		# 99Stiffness all over
+			99:"Do you feel stiff all over?",
+		# 100 Pelvic pressure
+			100:"Do you feel pressure in your pelvic region?",
+		# 101: Shoulder symptoms
+		# 102: Painful menstruation
+		# 103: Rectal bleeding
+		# 104: Throat swelling
+		# 105: Thirst
+		# 106: Musculoskeletal deformities
+		# 107: Swollen or red tonsils
+		# 108: Leg symptoms
+		# 109: Shoulder stiffness or tightness
+		# 110: Leg lump or mass
+		# 111: Hand or finger weakness
+		# 112: White discharge from eye
+		# 113: Pain during pregnancy
+		# 114: Back symptoms
+		# 115: Itchiness of eye
+		# 116: Sneezing
+		# 117: Double vision
+		# 118: Redness in or around nose
+		# 119: Penis symptoms
+		# 120: Problems during pregnancy
+		# 121: Eye burns or stings
+		# 122: Swollen lymph nodes
+		# 123: Ankle symptoms
+		# 124: Vaginal itching
+		# 125: Eye discharge
+		# 126: Sweating
+		# 127: Bleeding or discharge from nipple
+		# 128: Side pain
+		# 129: Arm lump or mass
+		# 130: Skin looks infected
+		# 131: Involuntary urination
+		# 132: Hand or finger swelling
+		# 133: Low self-esteem
+		# 134: Spots or clouds in vision
+		# 135: Cramps and spasms
+		# 136: Arm stiffness or tightness
+		# 137: Lump or mass of breast
+		# 138: Pelvic pain
+		# 139: Itching of skin
+		# 140: Jaw swelling
+		# 141: Sharp abdominal pain
+		# 142: Symptoms of the female reproductive system
+		# 143: Tongue lesions
+		# 144: Abnormal appearing skin
+		# 145: Symptoms of bladder
+		# 146: Vaginal pain
+		# 147: Arm symptoms
+		# 148: Lump in throat
+		# 149: Neck pain
+		# 150: Blood in urine
+		# 151: Leg pain
+		# 152: "Skin dryness, peeling, scaliness, or roughness"
+		# 153: Neck stiffness or tightness
+		# 154: Breathing fast
+		# 155: Sharp chest pain
+		# 156: Uterine contractions
+		# 157: Warts
+		# 158: Delusions or hallucinations
+		# 159: Ankle swelling
+		# 160: Disturbance of memory
+		# 161: Lymphedema
+		# 162: Eyelid swelling
+		# 163: Blindness
+		# 164: Diarrhea
+		# 165: Groin mass
+		# 166: Vaginal discharge
+		# 167: Swollen eye
+		# 168: Ear pain
+		# 169: Sore throat
+		# 170: Peripheral edema
+		# 171: Antisocial behavior
+		# 172: Neck symptoms
+		# 173: Low back pain
+		# 174: Skin swelling
+		# 175: Symptoms of the face
+		# 176: Restlessness
+		# 177: Pain during intercourse
+		# 178: Penis redness
+		# 179: Fears and phobias
+		# 180: Changes in stool appearance
+		# 181: Constipation
+		# 182: Throat feels tight
+		# 183: Skin pain
+		# 184: Difficulty speaking
+		# 185: Nausea
+		# 186: Arm swelling
+		# 187: Lack of growth
+		# 188: Burning abdominal pain
+		# 189: Leg weakness
+		# 190: Leg stiffness or tightness
+		# 191: Weight loss
+		# 192: Behavioral disturbances
+		# 193: Sinus congestion
+		# 194: Wheezing
+		# 195: Difficulty breathing
+		# 196: Sleep disturbance
+		# 197: Hand or finger stiffness or tightness
+		# 198: Wrist swelling
+		# 199: Excessive anger
+		# 200: Facial pain
+		# 201: Pulling at ears
+		# 202: Vaginal symptoms
+		# 203: Congestion in chest
+		# 204: Problems with shape or size of breast
+		# 205: Insomnia
+		# 206: Knee weakness
+		# 207: Back cramps or spasms
+		# 208: Bleeding from ear
+		# 209: Diaper rash
+		# 210: Changes in bowel function
+		# 211: Skin lesion
+		# 212: Painful sinuses
+		# 213: Skin moles
+		# 214: Itchy ear(s)
+		# 215: Swollen tongue
+		# 216: Eyelid lesion or rash
+		# 217: Penile discharge
+		# 218: Feeling hot
+		# 219: Increased heart rate
+		# 220: Chest pain
+		# 221: Hip symptoms
+		# 222: Infant spitting up
+		# 223: Irregular heartbeat
+		# 224: Hip pain
+		# 225: Diminished vision
+		# 226: Symptoms of the breast
+		# 227: Lower body pain
+		# 228: Skin on arm or hand looks infected
+		# 229: Elbow pain
+		# 230: Impotence
+		# 231: Slurring words
+		# 232: Allergic reaction
+		# 233: Recent pregnancy
+		# 234: Anxiety and nervousness
+		# 235: Intermenstrual bleeding
+		# 236: Hurts to breath
+		# 237: Foot or toe pain
+		# 238: Temper problems
+		# 239: Painful urination
+		# 240: Fever
+		# 241: Absence of menstruation
+		# 242: Knee symptoms
+		# 243: Irritable infant
+		# 244: Nosebleed
+		# 245: Wrist symptoms
+		# 246: Unpredictable menstruation
+		# 247: Shoulder pain
+		# 248: Smoking problems
+		# 249: Paresthesia
+		# 250: Toothache
+		# 251: Arm pain
+		# 252: Pelvic symptoms
+		# 253: Foreign body sensation in eye
+		# 254: Chest tightness
+		# 255: Ankle pain
+		# 256: Hand and finger symptoms
+		# 257: Abnormal movement of eyelid
+		# 258: Feeling ill
+		# 259: Heavy menstrual flow
+		# 260: Bones are painful
+		# 261: Apnea
+		# 262: Throat irritation
+		# 263: Symptoms of prostate
+		# 264: Mass in scrotum
+		# 265: Symptoms of the skin
+		# 266: Focal weakness
+		# 267: Abnormal growth or development
+		# 268: Disturbance of smell or taste
+		# 269: Nose symptoms
+		# 270: Knee stiffness or tightness
+		# 271: Plugged feeling in ear
+		# 272: Symptoms of the kidneys
+		# 273: Symptoms of the anus
+		# 274: Cough
+		# 275: Regurgitation
+		# 276: Coryza
+		# 277: Pain in eye
+		# 278: Vomiting
+		# 279: Fluid retention
+		# 280: Hot flashes
+		# 281: Upper abdominal pain
+		# 282: Skin rash
+		# 283: Rib pain
+		# 284: Swollen abdomen
+		# 285: Infant feeding problem
+		# 286: Knee pain
+		# 287: Redness in ear
+		# 288: Flatulence
+		# 289: Chills
+		# 290: Depression
+		# 291: Weight gain
+		# 292: Muscle pain
+		# 293: Fluid in ear
+		# 294: Penis pain
+		# 295: Abusing alcohol
+		# 296: Retention of urine
+		# 297: Drainage in throat
+		# 298: Skin irritation
+		# 299: Shortness of breath
+
 		}
 		return option[iden]
 
