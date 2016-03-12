@@ -415,204 +415,404 @@ class Learning:
 		# 100 Pelvic pressure
 			100:"Do you feel pressure in your pelvic region?",
 		# 101: Shoulder symptoms
+			101:"Are the symptoms in your shoulder?",
 		# 102: Painful menstruation
+			102:"Do you experience painful mentruations?",
 		# 103: Rectal bleeding
+			103:"Are you bleeding from your rectum?",
 		# 104: Throat swelling
+			104:"Is your throat swollen?",
 		# 105: Thirst
+			105:"Are you constantly thirsty?",
 		# 106: Musculoskeletal deformities
+			106:"Do you have a crooked back?",
 		# 107: Swollen or red tonsils
+			107:"Do you have swollen or red tonsils?",
 		# 108: Leg symptoms
+			108:"Are you experiencing your symptoms in your leg?",
 		# 109: Shoulder stiffness or tightness
+			109:"Is your shoulder stiff or tight?",
 		# 110: Leg lump or mass
+			110:"Do you have a lump or mass in your leg?",
 		# 111: Hand or finger weakness
+			111:"Do your hands or fingers feel weak?",
 		# 112: White discharge from eye
+			112:"Do you have white discharge from your eye?",
 		# 113: Pain during pregnancy
+			113:"Are you experiencing pain while pregnant?",
 		# 114: Back symptoms
+			114:"Are the symptoms you are experiencing in your back?",
 		# 115: Itchiness of eye
+			115:"Are your eye(s) itchy?",
 		# 116: Sneezing
+			116:"Are you constantly sneezing?",
 		# 117: Double vision
+			117:"Do you have double vision?",
 		# 118: Redness in or around nose
+			118:"Do you have redness in or around your nose?",
 		# 119: Penis symptoms
+			119:"Are the symptoms you are experiencing around your penis?",
 		# 120: Problems during pregnancy
+			120:"Are you experiencing problems while pregnant?",
 		# 121: Eye burns or stings
+			121:"Does your eye burn or sting?",
 		# 122: Swollen lymph nodes
+			122:"Do you have swollen lymph nodes?",
 		# 123: Ankle symptoms
+			123:"Are you experiencing ankle symptoms?",
 		# 124: Vaginal itching
+			124:"Are you experiencing vaginal itchiness?",
 		# 125: Eye discharge
+			125:"Is there discharge coming out of your eye(s)?",
 		# 126: Sweating
+			126:"Are you constantly sweating and/or do you have experience cold sweats?",
 		# 127: Bleeding or discharge from nipple
+			127:"Are you bleeding and/or is there discharge from your nipple?",
 		# 128: Side pain
+			128:"Are you experiencing side pain?",
 		# 129: Arm lump or mass
+			129:"Do you have a lump or mass in your arm?",
 		# 130: Skin looks infected
+			130:"Does your skin look infected?",
 		# 131: Involuntary urination
+			131:"Are you experiencing involuntary urination?",
 		# 132: Hand or finger swelling
+			132:"Is your hand or finger swollen?",
 		# 133: Low self-esteem
+			133:"Do you have low self-esteem?",
 		# 134: Spots or clouds in vision
+			134:"Do you have spots or clouds in your vision?",
 		# 135: Cramps and spasms
+			135:"Are you experiencing cramps and spasms?",
 		# 136: Arm stiffness or tightness
+			136:"Is your arm stiff or tight?",
 		# 137: Lump or mass of breast
+			137:"Is there a lump or mass in your breast?",
 		# 138: Pelvic pain
+			138:"Are you experiencing pelvic pain?",
 		# 139: Itching of skin
+			139:"Is you skin itchy?",
 		# 140: Jaw swelling
+			140:"Is your jaw swollen?",
 		# 141: Sharp abdominal pain
+			141:"Are you experiencing sharp abdominal pain?",
 		# 142: Symptoms of the female reproductive system
+			142:"Are your symptoms in your genital region?",
 		# 143: Tongue lesions
+			143:"Do you have tongue lesions?",
 		# 144: Abnormal appearing skin
+			144:"Do you have abnormally appearing skin?",
 		# 145: Symptoms of bladder
+			145:"Are the symptoms you are experiencing in your bladder?",
 		# 146: Vaginal pain
+			146:"Do you have vaginal pain?",
 		# 147: Arm symptoms
+			147:"Do you have arm symptoms?",
 		# 148: Lump in throat
+			148:"Do you have a lump in your throat?",
 		# 149: Neck pain
+			149:"Are you experiencing neck pain?",
 		# 150: Blood in urine
+			150:"Do you have blood in your urine?",
 		# 151: Leg pain
+			151:"Are you experiencing leg pain?",
 		# 152: "Skin dryness, peeling, scaliness, or roughness"
+			152:"Do you have skin dryness, peeling, scaliness or roughness?",
 		# 153: Neck stiffness or tightness
+			153:"Do you have neck stiffnes or tightness?",
 		# 154: Breathing fast
+			154:"Are you rapidly breathing?",
 		# 155: Sharp chest pain
+			155:"Are you experiencing chest pain?",
 		# 156: Uterine contractions
+			156:"Are you experiencing uterine contractions?",
 		# 157: Warts
+			157:"Do you have warts?",
 		# 158: Delusions or hallucinations
+			158:"Are you experiencing delusions or hallucinations?",
 		# 159: Ankle swelling
+			159:"Are your ankles swollen?",
 		# 160: Disturbance of memory
+			160:"Are you experiencing memory disturbances?",
 		# 161: Lymphedema
+			161:"Do you have swollen lymph nodes or vericose veins?",
 		# 162: Eyelid swelling
+			162:"Is your eyelid swollen?",
 		# 163: Blindness
+			163:"Are you experiencing blindness?",
 		# 164: Diarrhea
+			164:"Do you have Diarrhea?",
 		# 165: Groin mass
+			165:"Is there a mass in your groin?",
 		# 166: Vaginal discharge
+			166:"Do you have vaginal discharge?",
 		# 167: Swollen eye
+			167:"Is your eye swollen?",
 		# 168: Ear pain
+			168:"Are you experiencign ear pain?",
 		# 169: Sore throat
+			169:"Do you have a sore throat?",
 		# 170: Peripheral edema
+			170:"Are both of your ankles or both of your legs swelling?",
 		# 171: Antisocial behavior
+			171:"Do you have antisocial behaviour?",
 		# 172: Neck symptoms
+			172:"Are the symptoms you are experiencing in your neck?",
 		# 173: Low back pain
+			173:"Are you experiencing lower back pain?",
 		# 174: Skin swelling
+			174:"Are you experiencing skin swelling?",
 		# 175: Symptoms of the face
+			175:"Are your symptoms in your face?",
 		# 176: Restlessness
+			176:"Are you constantly restless?",
 		# 177: Pain during intercourse
+			177:"Do you experience pain during intercourse?",
 		# 178: Penis redness
+			178:"Is your penis appearing red?",
 		# 179: Fears and phobias
+			179:"Do you have intense fears and phobias?",
 		# 180: Changes in stool appearance
+			180:"Has there recently been changes in your stool appearance or colour?",
 		# 181: Constipation
+			181:"Are you experiencing constipation?",
 		# 182: Throat feels tight
+			182:"Does your throat feel tight?",
 		# 183: Skin pain
+			183:"Are you experiencing skin pain?",
 		# 184: Difficulty speaking
+			184:"Are you having difficulty speaking?",
 		# 185: Nausea
+			185:"Do you feel nauseous?",
 		# 186: Arm swelling
+			186:"Is your arm swollen?",
 		# 187: Lack of growth
+			187:"Are you experiencing lack of growth?",
 		# 188: Burning abdominal pain
+			188:"Are you experiencing burning abdominal pain?",
 		# 189: Leg weakness
+			189:"Does your leg feel weak?",
 		# 190: Leg stiffness or tightness
+			190:"Does your leg feel stiff or tight?",
 		# 191: Weight loss
+			191:"Have you recently lost weight?",
 		# 192: Behavioral disturbances
+			192:"Do you feel agitated, a lack of control or have a similar behavior problem?",
 		# 193: Sinus congestion
+			192:"Are you experiencing sinus congestion?",
 		# 194: Wheezing
+			194:"Are you wheezing?",
 		# 195: Difficulty breathing
+			195:"Do you have difficulty breathing?",
 		# 196: Sleep disturbance
+			196:"Do you have frequent nightmares/ night terrors?",
 		# 197: Hand or finger stiffness or tightness
+			197:"Do your hands/ fingers feel stiff or tight?",
 		# 198: Wrist swelling
+			198:"Is your wrist swollen?",
 		# 199: Excessive anger
+			199:"Are you excessively angry/agresive?",
 		# 200: Facial pain
+			200:"Are you experiencing facial pain?",
 		# 201: Pulling at ears
+			201:"Do you feel as if your ears are being pulled?",
 		# 202: Vaginal symptoms
+			202:"Are the symptosm you are experiencing in your vaginal region?",
 		# 203: Congestion in chest
-		# 204: Problems with shape or size of breast
+			203:"Are you experiencing chest congestion?",
+		# 204: Problems with shape or size of breasts
+			204:"Are there problems with the size or shape of your breasts?",
 		# 205: Insomnia
+			205:"Do you have difficulty sleeping?",
 		# 206: Knee weakness
+			206:"Does your knee feel weak?",
 		# 207: Back cramps or spasms
+			207:"Are you experiencign back cramps or spasms?",
 		# 208: Bleeding from ear
+			208:"Are you bleeding from your ear?",
 		# 209: Diaper rash
+			209:"Do you have a diaper rash?",
 		# 210: Changes in bowel function
+			210:"Have you experienced recent changes in your bowel function?",
 		# 211: Skin lesion
+			211:"Is ther a lesion/sore on your skin?",
+
 		# 212: Painful sinuses
+			212:"Are you experiencing painful sinuses?",
 		# 213: Skin moles
+			213:"Are there moles on your skin?",
 		# 214: Itchy ear(s)
+			214:"Are your ears itchy?",
 		# 215: Swollen tongue
+			215:"Is your tongue swollen?",
 		# 216: Eyelid lesion or rash
+			216:"Is there a lesion/sore or rash on your eyelid?",
 		# 217: Penile discharge
+			217:"Do you have discharge from your penis?",
 		# 218: Feeling hot
+			218:"Do you feel hot?",
 		# 219: Increased heart rate
+			219:"Is your heart racing?",
 		# 220: Chest pain
+			220:"Do you have chest pain?",
 		# 221: Hip symptoms
+			221:"Are your symptoms in your hip?",
 		# 222: Infant spitting up
+			222:"Is your infant spitting up?",
 		# 223: Irregular heartbeat
+			223:"Do you have an irregular heartbeat?",
 		# 224: Hip pain
+			224:"Are you experiencing hip pain?",
 		# 225: Diminished vision
+			225:"Do you have blurred vison, have trouble reading or trouble focusing?",
 		# 226: Symptoms of the breast
+			226:"Are your symptoms in your breast?",
 		# 227: Lower body pain
+			227:"Are you experiencing lower body pain?",
 		# 228: Skin on arm or hand looks infected
+			228:"Does the skin on your arm or hand look infected?",
 		# 229: Elbow pain
+			229:"Do you ave pain in your elbow?",
 		# 230: Impotence
+			230:"Are you unable to get an erection?",
 		# 231: Slurring words
+			231:"Do you slur your words?",
 		# 232: Allergic reaction
+			232:"Do you have hives and/or trouble breathing?",
 		# 233: Recent pregnancy
+			233:"Were you recently pregnant?",
 		# 234: Anxiety and nervousness
+			234:"Are you anxious or nervous?",
 		# 235: Intermenstrual bleeding
+			235:"Are you bleeding in between menstrual periods?",
 		# 236: Hurts to breath
+			236:"Does it hurt to breath?",
 		# 237: Foot or toe pain
+			237:"Do you have foot or toe pain?",
 		# 238: Temper problems
+			238:"Do you have a temper problem/ are you angry often?",
 		# 239: Painful urination
+			239:"Is it painful to urinate?",
 		# 240: Fever
+			240:"Do you feel feverish/ are you warm to the touch?",
 		# 241: Absence of menstruation
+			241:"Have you not had a menstrual cycle in a while?",
 		# 242: Knee symptoms
+			242:"Are you experiencing knee symptoms?",
 		# 243: Irritable infant
+			243:"Do you have an irritable infant?",
 		# 244: Nosebleed
+			244:"Do you have a nosebleed?",
 		# 245: Wrist symptoms
+			245:"Do you have wrist symptoms?",
 		# 246: Unpredictable menstruation
+			246:"Is your menstrual cycle unpredictable?",
 		# 247: Shoulder pain
+			247:"Do you have shoulder pain?",
 		# 248: Smoking problems
+			248:"Do you smoke a lot?",
 		# 249: Paresthesia
+			249:"Do you feel burning or prickling on your skin?",
 		# 250: Toothache
+			250:"Do you have a toothache?",
 		# 251: Arm pain
+			251:"Do you have arm pain?",
 		# 252: Pelvic symptoms
+			252:"Are your symptoms in or around your pelvis?",
 		# 253: Foreign body sensation in eye
+			253:"Do you feel like there is something in your eye?",
 		# 254: Chest tightness
+			254:"Are you experiencing tightness in your chest?",
 		# 255: Ankle pain
+			255:"Do you have ankle pain?",
 		# 256: Hand and finger symptoms
+			256:"Are your symptoms in your hand/finger?",
 		# 257: Abnormal movement of eyelid
+			257:"Are you excessively blinking, is your eyelid drooping or are you squinting excessively?",
 		# 258: Feeling ill
+			258:"Do you generall feel ill?",
 		# 259: Heavy menstrual flow
+			259:"Do you have a heavy mentrual flow?",
 		# 260: Bones are painful
+			260:"Are your bones painful?",
 		# 261: Apnea
+			261:"Do you snore loudly or stop breathing while you sleep?",
 		# 262: Throat irritation
+			262:"Does your through feel itchy/scratchy?",
 		# 263: Symptoms of prostate
+			263:"Are your symptoms in or around your prostate?",
 		# 264: Mass in scrotum
+			264:"Do you have a mass in your scrotum?",
 		# 265: Symptoms of the skin
+			265:"Are your symptoms on your skin?",
 		# 266: Focal weakness
+			266:"Do you feel weak on one side of your body?",
 		# 267: Abnormal growth or development
+			267:"Are you experiecning abnormal growth or development?",
 		# 268: Disturbance of smell or taste
+			268:"Do you have problems with your sense of smell or taste?",
 		# 269: Nose symptoms
+			269:"Are your symptoms in your nose?",
 		# 270: Knee stiffness or tightness
+			270:"Are you experiencing knee stiffness or tightness?",
 		# 271: Plugged feeling in ear
+			271:"Does your ear(s) feel plugged?",
 		# 272: Symptoms of the kidneys
+			272:"Are your symptoms in your kidney/lower back?",
 		# 273: Symptoms of the anus
+			273:"Are your symptoms in or around your anus?",
 		# 274: Cough
+			274:"Do you have a cough?",
 		# 275: Regurgitation
+			275:"Are you regurgitating?",
 		# 276: Coryza
+			276:"Do you have a stuffy nose?",
 		# 277: Pain in eye
+			277:"Do you have pain in your eye?",
 		# 278: Vomiting
+			278:"Are you vomiting?",
 		# 279: Fluid retention
+			279:"Are you retaining a lot of fluid?",
 		# 280: Hot flashes
-		# 281: Upper abdominal pain
+			280:"Are you experiencing hot flashes?",
+		# 281: Upper abdominal painful
+			281:"Do you have upper abdominal pain?",
 		# 282: Skin rash
+			282:"Do you have a skin rash?",
 		# 283: Rib pain
+			283:"Do you have pain in your ribs?",
 		# 284: Swollen abdomen
+			284:"Is your abdomen swollen?",
 		# 285: Infant feeding problem
+			285:"Are you having trouble feeding your infant?",
 		# 286: Knee pain
+			286:"Do you have knee pain?",
 		# 287: Redness in ear
+			286:"Is there redness in your ear?",
 		# 288: Flatulence
+			288:"Are you overly flatulent?",
 		# 289: Chills
+			289:"Do you have chills?",
 		# 290: Depression
+			290:"Are you depressed/ are you sad all of the time?",
 		# 291: Weight gain
+			291:"Have you recently undergone weight gain?",
 		# 292: Muscle pain
+			292:"Do you have pain in your muscles?",
 		# 293: Fluid in ear
+			293:"Is there fluid in your ear. does your ear feel full?",
 		# 294: Penis pain
+			294:"Does your penis hurt?",
 		# 295: Abusing alcohol
+			295:"Do you drink alcohol excessively?",
 		# 296: Retention of urine
+			296:"Are you unable to urinate or do you have trouble urinating?",
 		# 297: Drainage in throat
+			297:"Is your nose draining mucus into your throat?",
 		# 298: Skin irritation
+			298:"Is your skin irritated/ do you have a rash?",
 		# 299: Shortness of breath
+			299:"Are you experiencing shortness of breath?"
 
 		}
 		return option[iden]
