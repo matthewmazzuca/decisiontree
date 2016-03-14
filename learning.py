@@ -117,7 +117,7 @@ class Learning:
 		print data
 
 	def produce_image(self):
-		tree.export_graphviz(self.model, out_file='tree.dot', class_names=self.target)
+		tree.export_graphviz(self.model, out_file='tree.dot', class_names=self.y)
 		os.system("dot -Tpng tree.dot -o tree.png")
 		os.system("open tree.png")
 		return
@@ -207,6 +207,36 @@ class Learning:
 			js = js + recurse(decision_tree.tree_, 0, criterion=decision_tree.criterion)
 
 		print js
+
+	def rules(self, node_index=0):
+	    """Structure of rules in a fit decision tree classifier
+
+	    Parameters
+	    ----------
+	    clf : DecisionTreeClassifier
+	        A tree that has already been fit.
+
+	    features, labels : lists of str
+	        The names of the features and labels, respectively.
+
+	    """
+	    clf = self.model
+	    features = self.target
+	    labels = self.y
+	    node = {}
+	    if clf.tree_.children_left[node_index] == -1:  # indicates leaf
+	        count_labels = zip(clf.tree_.value[node_index, 0], labels)
+	        node['name'] = ', '.join(('{} of {}'.format(int(count), label)
+	                                  for count, label in count_labels))
+	    else:
+	        feature = features[clf.tree_.feature[node_index]]
+	        threshold = clf.tree_.threshold[node_index]
+	        node['name'] = '{} > {}'.format(feature, threshold)
+	        left_index = clf.tree_.children_left[node_index]
+	        right_index = clf.tree_.children_right[node_index]
+	        node['children'] = [self.rules(right_index),
+	                            self.rules(left_index)]
+	    return node
 
 	def get_question(self, iden):
 
@@ -599,7 +629,7 @@ class Learning:
 		# 192: Behavioral disturbances
 			192:"Do you feel agitated, a lack of control or have a similar behavior problem?",
 		# 193: Sinus congestion
-			192:"Are you experiencing sinus congestion?",
+			193:"Are you experiencing sinus congestion?",
 		# 194: Wheezing
 			194:"Are you wheezing?",
 		# 195: Difficulty breathing
@@ -788,7 +818,7 @@ class Learning:
 		# 286: Knee pain
 			286:"Do you have knee pain?",
 		# 287: Redness in ear
-			286:"Is there redness in your ear?",
+			287:"Is there redness in your ear?",
 		# 288: Flatulence
 			288:"Are you overly flatulent?",
 		# 289: Chills

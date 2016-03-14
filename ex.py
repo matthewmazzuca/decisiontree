@@ -58,10 +58,11 @@
 
 import numpy as np
 import urllib
-
+import sys
 from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, _tree
 from learning import Learning
+import json
 
 # url with dataset
 url = "http://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
@@ -116,19 +117,77 @@ learning = Learning('final_training3.txt')
 # for item in learning.y:
 # 	print item
 # print learning.X[30]
-for i in range(len(learning.target)):
-# for item in learning.target:
-	print str(i) + ": " + str(learning.target[i])
+# for i in range(len(learning.target)):
+# # for item in learning.target:
+# 	print str(i) + ": " + str(learning.target[i])
 
-print learning.get_question(0)
+# print learning.get_question(0)
 # for item in range(len(learning.X[30])):
 # 	if learning.X[30][item] == 1:
 # 		print learning.target[item]
 # learning.tree_print()
 # learning.treeToJson()
+# print learning.tree.value[10]
 # learning.produce_image()
 # print learning.predict(reshaped)
-# print learning.predict([learning.X[30]])
+# np.array([1, 2, 3,4, 5, 6,7, 8, 9,10])
+def diagnose(node_id, tree, model, fit=[]):
+	if node_id == 0:
+		for i in range(0,300):
+			fit.append(0.0)
+
+	left = tree.children_left[node_id]
+	right = tree.children_right[node_id]
+	feature = tree.feature[node_id]
+
+	question = model.get_question(feature)
+	print left, right, feature
+	ans = raw_input(question + " : ")
+	print "LEFT: " + str(left) + " --> " + str(left==_tree.TREE_LEAF) + " : " + str(tree.feature[left])
+	print "RIGHT: " + str(right) + " --> " + str(right==_tree.TREE_LEAF)+ " : " + str(tree.feature[right])
+
+	if 'y' in ans:
+		fit[feature] = 1.0
+		if left == _tree.TREE_LEAF or tree.feature[left] == -2:
+			print model.predict([fit])	
+			print fit
+			diagnose(0,tree,model, [])
+
+		else:
+			diagnose(left, tree, model, fit)		
+		
+	else:
+		if right == _tree.TREE_LEAF or tree.feature[right] == -2:
+			print model.predict([fit])
+			print fit
+			diagnose(0,tree,model, [])
+		else:
+			diagnose(right, tree,model,fit)
+
+	
+
+# tree = learning.tree
+# feature_id = learning.tree.feature[0]
+# print feature_id
+# print learning.get_question(feature_id)
+
+# left =  tree.children_left[0]
+# right = tree.children_right[0]
+# feature_left = learning.tree.feature[left]
+# feature_right = learning.tree.feature[right]
+# print left, right, feature_left, feature_right
+# print learning.get_question(feature_left)
+# print learning.get_question(feature_right)
+# print tree.children_left[0] != _tree.TREE_LEAF
+
+diagnose(0,learning.tree, learning)
+
+# print learning.rules()
+
+# r = learning.rules()
+# with open('rules.json', 'w') as f:
+#     f.write(json.dumps(r))
+# print learning.predict([learning.X[10]])
 
 # print "your diagnosis:", '\t', "you have acid reflux"
 # metrics
