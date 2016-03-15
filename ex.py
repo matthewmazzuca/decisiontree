@@ -110,7 +110,7 @@ dataset = np.loadtxt(raw_data, delimiter=",")
 # print y[1]
 
 
-learning = Learning('final_training3.txt')
+learning = Learning('final_training4.txt')
 
 
 # reshaped = [learning.X[1]]
