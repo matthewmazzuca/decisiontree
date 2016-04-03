@@ -26,12 +26,27 @@ class Learning:
 		# print d2[1]
 		y = d2[:,0]
 		X = d2[:,1:,]
+		target = X[0]
+		# X.pop(0)
+		# for i in range(len(X)):
+		# 	for j in range(len(X[i])):
+		# 		X[i][j] = int(X[i][j])
+
+		for i in range(len(X)):
+			print X[i]
 
 		target = X[0]
 		# self.clean_target(target)
-		X = X.astype(int)
+
 		X = np.delete(X, 0, 0)
+
 		y = np.delete(y, 0)
+		X = X.astype(float)
+
+		
+
+		
+		# print y
 		# print X2[1]
 		# print Y2[1]
 		return X, y, target
@@ -44,7 +59,7 @@ class Learning:
 	# 			# print target[item]
 
 	def get_model(self):
-		model = DecisionTreeClassifier(criterion='entropy', presort=True)
+		model = DecisionTreeClassifier(criterion='gini', presort=True)
 		model.fit(self.X, self.y)
 		return model
 
@@ -68,6 +83,13 @@ class Learning:
 
 	def feature(self):
 		return self.tree.feature
+
+	def predict_proba(self, fit):
+		return self.model.predict_proba(fit)
+
+	def score(self, fit, guess):
+		# guess = self.target
+		return self.model.score(fit, guess)
 
 	def threshold(self):
 		return self.tree.threshold
@@ -119,7 +141,7 @@ class Learning:
 	def produce_image(self):
 		tree.export_graphviz(self.model, out_file='tree.dot', class_names=self.y)
 		os.system("dot -Tpng tree.dot -o tree.png")
-		os.system("open tree.png")
+		os.system("open -a 'Adobe Photoshop CS6' tree.png")
 		return
 
 	def treeToJson(self, feature_names=None):

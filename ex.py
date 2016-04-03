@@ -110,7 +110,7 @@ dataset = np.loadtxt(raw_data, delimiter=",")
 # print y[1]
 
 
-learning = Learning('final_training4.txt')
+learning = Learning('final_training7.txt')
 
 
 # reshaped = [learning.X[1]]
@@ -134,7 +134,8 @@ learning = Learning('final_training4.txt')
 def diagnose(node_id, tree, model, fit=[]):
 	if node_id == 0:
 		for i in range(0,300):
-			fit.append(0.0)
+			zero = float(0)
+			fit.append(zero)
 
 	left = tree.children_left[node_id]
 	right = tree.children_right[node_id]
@@ -147,21 +148,36 @@ def diagnose(node_id, tree, model, fit=[]):
 	print "RIGHT: " + str(right) + " --> " + str(right==_tree.TREE_LEAF)+ " : " + str(tree.feature[right])
 
 	if 'y' in ans:
-		fit[feature] = 1.0
+		fit[feature] = 10000.0
 		if left == _tree.TREE_LEAF or tree.feature[left] == -2:
 			print model.predict([fit])	
+			print model.predict_proba([fit])
 			print fit
 			diagnose(0,tree,model, [])
 
 		else:
+			prediction=model.predict(np.array(fit, dtype=np.float32))
+			print prediction
+			print np.array(fit, dtype=np.float32)
+			# print model.predict_proba([fit])
+			print model.score(np.array(fit, dtype=np.float32), prediction)
+			# print model.predict_proba([fit])
 			diagnose(left, tree, model, fit)		
 		
 	else:
+		fit[feature] = -10000.0
 		if right == _tree.TREE_LEAF or tree.feature[right] == -2:
 			print model.predict([fit])
+			print model.predict_proba([fit])
 			print fit
 			diagnose(0,tree,model, [])
 		else:
+			prediction=model.predict(np.array(fit, dtype=np.float32))
+			print prediction
+			print np.array(fit, dtype=np.float32)
+			# print model.predict_proba([fit])
+			print model.score(np.array(fit, dtype=np.float32), prediction)
+			# print model.predict_proba([fit])
 			diagnose(right, tree,model,fit)
 
 	
@@ -179,8 +195,31 @@ def diagnose(node_id, tree, model, fit=[]):
 # print learning.get_question(feature_left)
 # print learning.get_question(feature_right)
 # print tree.children_left[0] != _tree.TREE_LEAF
+# print learning.X
+# diagnose(0,learning.tree, learning)
+import os
+def notify(title, subtitle, message):
+    t = '-title {!r}'.format(title)
+    s = '-subtitle {!r}'.format(subtitle)
+    m = '-message {!r}'.format(message)
+    os.system('terminal-notifier {}'.format(' '.join([m, t, s])))
 
-diagnose(0,learning.tree, learning)
+# Calling the function
+notify(title    = 'Calibration Complete',
+       subtitle = 'Calibration Curve 3 Selected',
+       message  = 'Accuracy: 94.754%')
+
+from pylab import *
+import matplotlib.pyplot  as pyplot
+a = [ pow(10,i) for i in range(10) ]
+fig = pyplot.figure()
+ax = fig.add_subplot(2,1,1)
+
+line, = ax.plot(a, color='blue', lw=2)
+
+ax.set_yscale('log')
+
+show()
 
 # print learning.rules()
 
